@@ -29,11 +29,13 @@ module tb_snake_game();
 
     initial begin 
         #5;
+        SW[0] = 0;
+        #10;
         SW[0] = 1;
-        #5;
+        #10;
         SW[0] = 0;
 
-        $wait(dut.state == dut.GAME_END);
+        wait(dut.state == dut.GAME_END);
     end
 
 endmodule: tb_snake_game

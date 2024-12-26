@@ -10,18 +10,13 @@ logic [6:0] count_posY;
 logic clkX, clkY;
 logic [7:0] counterX, counterY;
 
-logic delay_rst_n_X;
-logic delay_rst_n_Y;
-
 /* counter based clock divider */
-always_ff @(posedge clk) begin 
+always_ff @(posedge clk or negedge rst_n) begin 
    if (!rst_n) begin 
       clkX <= 0;
       clkY <= 0;
       counterX <= 0;
       counterY <= 0;
-      delay_rst_n_X <= 0;
-      delay_rst_n_Y <= 0;
    end else begin 
       if(counterX == dividerX-1) begin 
          counterX <= 0;
@@ -39,9 +34,8 @@ always_ff @(posedge clk) begin
 end
 
 /* generate posx */
-always_ff @(posedge clkX)
-   if (!delay_rst_n_X) begin
-      delay_rst_n_X <= 1;
+always_ff @(posedge clkX or negedge rst_n)
+   if (!rst_n) begin
       count_posX <= 1;  
    end else begin
       if (count_posX >= 8'd159)
@@ -50,9 +44,8 @@ always_ff @(posedge clkX)
          count_posX <= count_posX + (dividerX % 8'd160);
    end
 /* generate posY */
-always_ff @(posedge clkY)
-   if (!delay_rst_n_Y) begin
-      delay_rst_n_Y <= 1;
+always_ff @(posedge clkY or negedge rst_n)
+   if (!rst_n) begin
       count_posY <= 1;  
    end else begin
       if (count_posY >= 7'd119)

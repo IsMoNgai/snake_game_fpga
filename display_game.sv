@@ -1,4 +1,4 @@
-`include "pos_rng.sv"
+// `include "pos_rng.sv"
 
 module display_game (input logic clk, input logic rst_n, input logic [2:0] colour, input logic [1:0] dir,
                      input logic start, output logic done, 
@@ -63,13 +63,21 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
         endcase
     end
 
-    always_ff @(posedge clk) begin 
+    always_ff @(posedge clk or negedge rst_n) begin 
         if(!rst_n) begin 
             state <= IDLE;
             done <= 0;
+            curr_apple_posX <= 15;
+            curr_apple_posY <= 15;
+            curr_snake_posX <= 0;
+            curr_snake_posY <= 0;
         end else begin 
             case(state) 
                 IDLE: begin 
+                    curr_apple_posX <= 15;
+                    curr_apple_posY <= 15;
+                    curr_snake_posX <= 0;
+                    curr_snake_posY <= 0;
                     if(start) begin 
                         done <= 0;
                         state <= INIT;
@@ -77,8 +85,10 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 end
                 /* Initialize the snake position */
                 INIT: begin 
-                    curr_snake_posX <= rng_posX;
-                    curr_snake_posY <= rng_posY;
+                    // curr_snake_posX <= rng_posX;
+                    // curr_snake_posY <= rng_posY;
+                    curr_snake_posX <= 20;
+                    curr_snake_posY <= 15;
                     state <= APPLE;
                 end
                 /* generate an apple */
@@ -119,7 +129,7 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                             end 
                             /* default go right */
                             default: begin 
-                                curr_snake_posX <= curr_snake_posX + 1;
+                                curr_snake_posX <= curr_snake_posX - 1;
                             end
                         endcase   
 
@@ -140,10 +150,8 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 end
                 /* gameover */
                 GAME_OVER: begin 
-                    if(!start) begin
-                        done <= 0; 
-                        state <= IDLE;
-                    end
+                    done <= 0; 
+                    state <= IDLE;
                 end
             endcase
         end

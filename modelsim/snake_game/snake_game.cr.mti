@@ -1,24 +1,16 @@
-C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_controller
-
-Top level modules:
-	vga_controller
-
-} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv
+C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module vga_pll
 
 Top level modules:
 	vga_pll
 
-} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module pos_rng
--- Compiling module display_game
+-- Compiling module vga_controller
 
 Top level modules:
-	display_game
+	vga_controller
 
 } {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -26,6 +18,16 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	vga_adapter
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv {2 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+** Warning: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv(43): (vlog-2284) Empty $unit scope found.
+-- Compiling package tb_snake_game_sv_unit
+-- Compiling module tb_snake_game
+
+Top level modules:
+	tb_snake_game
 
 } {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

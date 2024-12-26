@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at snake_game.sv(36): always construct contains both blocking and non-blocking assignments File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 36
+Info (10281): Verilog HDL Declaration information at snake_game.sv(14): object "start" differs only in case from object "START" in the same scope File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 14
