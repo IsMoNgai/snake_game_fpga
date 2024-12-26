@@ -1,0 +1,19 @@
+C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pos_rng
+-- Compiling module display_game
+
+Top level modules:
+	display_game
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_display_game.sv {2 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_display_game.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+** Warning: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_display_game.sv(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_display_game.sv(45): (vlog-2284) Empty $unit scope found.
+-- Compiling package tb_display_game_sv_unit
+-- Compiling module tb_display_game
+
+Top level modules:
+	tb_display_game
+
+} {} {}}

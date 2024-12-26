@@ -1,0 +1,44 @@
+C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_controller
+
+Top level modules:
+	vga_controller
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_pll
+
+Top level modules:
+	vga_pll
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pos_rng
+-- Compiling module display_game
+
+Top level modules:
+	display_game
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_adapter
+
+Top level modules:
+	vga_adapter
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pos_rng
+
+Top level modules:
+	pos_rng
+
+} {} {}} C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv {1 {vlog -work work -sv -stats=none C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_address_translator
+
+Top level modules:
+	vga_address_translator
+
+} {} {}}
