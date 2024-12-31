@@ -36,22 +36,22 @@ end
 /* generate posx */
 always_ff @(posedge clkX or negedge rst_n)
    if (!rst_n) begin
-      count_posX <= 1;  
+      count_posX <= 15;  
    end else begin
-      if (count_posX >= 8'd159)
-         count_posX <= 1;
+      if (count_posX >= 8'd130)
+         count_posX <= 15;
       else 
-         count_posX <= count_posX + (dividerX % 8'd160);
+         count_posX <= count_posX + (dividerX % 8'd130);
    end
 /* generate posY */
 always_ff @(posedge clkY or negedge rst_n)
    if (!rst_n) begin
-      count_posY <= 1;  
+      count_posY <= 15;  
    end else begin
-      if (count_posY >= 7'd119)
-         count_posY <= 1;
+      if (count_posY >= 7'd100)
+         count_posY <= 15;
       else 
-         count_posY <= count_posY + (dividerY % 8'd120);
+         count_posY <= count_posY + (dividerY % 8'd100);
    end
 
 assign rng_posX = count_posX;

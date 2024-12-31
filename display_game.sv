@@ -9,6 +9,7 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
     // for snake
     logic [7:0] curr_snake_posX, old_snake_posX;
     logic [6:0] curr_snake_posY, old_snake_posY;
+    logic [31:0] snake_len;
 
     // for apple
     logic [7:0] curr_apple_posX, old_apple_posX;
@@ -30,9 +31,9 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 /* do nothing */
             end
             INIT: begin 
-                vga_x = curr_snake_posX;
-                vga_y = curr_snake_posY;
-                vga_plot = 1;
+                // vga_x = curr_snake_posX;
+                // vga_y = curr_snake_posY;
+                // vga_plot = 1;
             end
             APPLE: begin 
                 vga_colour = 3'b100;
@@ -58,6 +59,7 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 vga_plot = 1;
             end
             GAME_OVER: begin 
+                /* now screen clear is handled by top level so do nothing here */
                 /* do nothing or clear screen or show game over */
             end
         endcase
@@ -93,14 +95,13 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 end
                 /* generate an apple */
                 APPLE: begin 
-                    curr_apple_posX <= rng_posX;
-                    curr_apple_posY <= rng_posY;
                     state <= ERASE_SNAKE_OLD;
                 end
                 /* control the movement of snake and other logics */
                 MOVE: begin 
                     /* if the apple got eaten */
                     if(curr_snake_posX == curr_apple_posX && curr_snake_posY == curr_apple_posY) begin 
+                        snake_len <= snake_len + 1;
                         state <= ERASE_APPLE_OLD;
                     end 
                     /* if the snake go outside of box */
@@ -146,6 +147,8 @@ module display_game (input logic clk, input logic rst_n, input logic [2:0] colou
                 end
                 /* erase the apple's old position */
                 ERASE_APPLE_OLD: begin 
+                    curr_apple_posX <= rng_posX;
+                    curr_apple_posY <= rng_posY;
                     state <= APPLE;
                 end
                 /* gameover */

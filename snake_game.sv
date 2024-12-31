@@ -1,3 +1,8 @@
+/*
+This module is a top level for the actual 
+snake game interfacing with De1-Soc
+*/
+
 module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
                   input logic [9:0] SW, output logic [9:0] LEDR,
                   output logic [6:0] HEX0, output logic [6:0] HEX1, output logic [6:0] HEX2,
@@ -12,9 +17,22 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
     logic [9:0] VGA_R_10, VGA_G_10, VGA_B_10;
     logic clk, rst_n, rst_n_display, should_rst_n;
     logic start, done;
+    logic start_fs, done_fs; // fillscreen
     logic [1:0] dir;
     logic clock_slow;
     logic [31:0] count_slow;
+
+    /* fillscreen */
+    logic [7:0] vga_x_fs;
+    logic [6:0] vga_y_fs;
+    logic [2:0] vga_colour_fs;
+    logic vga_plot_fs;
+
+    /* display game */
+    logic [7:0] vga_x_dg;
+    logic [6:0] vga_y_dg;
+    logic [2:0] vga_colour_dg;
+    logic vga_plot_dg;
 
     /* assignment */
     assign VGA_R = VGA_R_10[9:2];
@@ -38,7 +56,10 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
             clock_slow = 0;
             count_slow <= 0;
         end else begin 
-            if(count_slow == 500000) begin 
+            // 5 if testing for model sim
+            if(count_slow == 5) begin
+            // 500000 is good for hardware display
+            // if(count_slow == 500000) begin
                 clock_slow <= !clock_slow;
                 count_slow <= 0;
             end else begin 
@@ -47,17 +68,31 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
         end
     end
 
+    /* fillscreen to black again (clear) */
+    fillscreen clear_screen(
+        .clk(clk), 
+        .rst_n(rst_n), 
+        .colour(3'b000),
+        .start(start_fs), 
+        .done(done_fs),
+        .vga_x(vga_x_fs), 
+        .vga_y(vga_y_fs),
+        .vga_colour(vga_colour_fs), 
+        .vga_plot(vga_plot_fs)
+    );
+
+    /* actual game logic and display */
     display_game snake_game_display(
         .clk(clock_slow),
         .rst_n(rst_n_display),
         .colour(3'b010), // RGB
         .start(start),
-        .done(done), 
+        .done(done),    
         .dir(dir),
-        .vga_x(VGA_X), 
-        .vga_y(VGA_Y),
-        .vga_colour(VGA_COLOUR),
-        .vga_plot(VGA_PLOT)
+        .vga_x(vga_x_dg), 
+        .vga_y(vga_y_dg),
+        .vga_colour(vga_colour_dg),
+        .vga_plot(vga_plot_dg)
     );
 
     /* vga display here */
@@ -74,19 +109,33 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
         .*
     );
 
+    /* mux for vga_x, vga_y, colour, vga_plot */
     always_comb begin 
+        VGA_X = 0;
+        VGA_Y = 0;
+        VGA_COLOUR = 0;
+        VGA_PLOT = 0;
         case(state)
             START: begin end
             GAME: begin 
-
+                VGA_X = vga_x_dg;
+                VGA_Y = vga_y_dg;
+                VGA_COLOUR = vga_colour_dg;
+                VGA_PLOT = vga_plot_dg;
             end
-            GAME_END: begin end
+            GAME_END: begin 
+                VGA_X = vga_x_fs;
+                VGA_Y = vga_y_fs;
+                VGA_COLOUR = vga_colour_fs;
+                VGA_PLOT = vga_plot_fs;
+            end
         endcase
     end
 
     always_ff @(posedge clk) begin 
         if(!rst_n) begin 
             start <= 1;
+            start_fs <= 0;
             state <= START;
         end else begin 
             case(state)
@@ -97,9 +146,11 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
                         state <= GAME;
                     end 
                 end
+                /*This part control which button move the snake*/
                 GAME: begin 
                     if(done) begin 
                         start <= 0;
+                        start_fs <= 1;
                         state <= GAME_END;
                     end else begin 
                         if(rst_n_display && should_rst_n) begin 
@@ -136,7 +187,10 @@ module snake_game(input logic CLOCK_50, input logic [3:0] KEY,
                 end
                 GAME_END: begin 
                     start <= 1; 
-                    state <= START;
+                    if(done_fs) begin 
+                        start_fs <= 0;
+                        state <= START;                        
+                    end
                 end
             endcase
         end

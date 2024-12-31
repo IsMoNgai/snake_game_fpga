@@ -10,80 +10,104 @@ cModel Technology
 dC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/modelsim/display_game
 vdisplay_game
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1735204070
+Z1 !s110 1735604917
 !i10b 1
-!s100 @aXCYZLUozNk@H:kQiMaK1
-IfC2mI65Pd3dE3AQaLdCL61
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 C@okSZnAI>b7>[e[=6b4c3
+IY1kcFzIj`Izm4G00zO7NY3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 display_game_sv_unit
 S1
-Z2 dC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/modelsim/snake_game
-w1735203868
+Z3 dC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/modelsim/snake_game
+w1735604914
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv
 L0 3
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1735204070.000000
+Z5 !s108 1735604916.000000
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv|
 !i113 1
-Z5 o-work work -sv
-Z6 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vfillscreen
+R0
+R1
+!i10b 1
+!s100 b_iih5?oDDI1`gPgUiY]R2
+I8e86P9eEX10VTKnio^=CQ2
+R2
+!s105 fillscreen_sv_unit
+S1
+R3
+w1735603152
+8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv
+FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z8 !s108 1735604917.000000
+!s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv|
+!i113 1
+R6
+R7
 vpos_rng
 R0
-Z7 !s110 1735204071
-!i10b 1
-!s100 =1XXm`IDZaCzKfShNHT3o2
-IlIHk_==MJVd9LObcYm?bQ3
 R1
+!i10b 1
+!s100 hKV[6n3QjMf3T;GTn=a_Z3
+IK85H<fNAooaQIe`TSQnBY1
+R2
 !s105 pos_rng_sv_unit
 S1
-R2
-w1735199969
+R3
+w1735604782
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R4
+R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv|
 !i113 1
-R5
 R6
+R7
 vsnake_game
 R0
-R7
-!i10b 1
-!s100 j:4EiYlROKEIFRCKBaZQj3
-I=4j`5[FoT4H<E2BS<oHhi1
 R1
+!i10b 1
+!s100 i0Sf]>cc0XJ7UY6@]zkhL1
+I^:4PJc:jS:g=3D3cG4^B;2
+R2
 !s105 snake_game_sv_unit
 S1
-R2
-w1735203753
+R3
+w1735604864
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv
-L0 1
-R3
+L0 6
+R4
 r1
 !s85 0
 31
-Z8 !s108 1735204071.000000
+R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv|
 !i113 1
-R5
 R6
+R7
 vtb_snake_game
 R0
 DXx4 work 21 tb_snake_game_sv_unit 0 22 ^aAXLD@=hbZbP`^:AR:[A0
-R1
+R2
 r1
 !s85 0
 31
@@ -92,18 +116,18 @@ r1
 IVR]T@I8z]JXo7:4SVma1C3
 !s105 tb_snake_game_sv_unit
 S1
-R2
+R3
 Z9 w1735201219
 Z10 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv
 Z11 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv
 L0 3
-R3
 R4
+R5
 Z12 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv|
 Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/tb_snake_game.sv|
 !i113 1
-R5
 R6
+R7
 Xtb_snake_game_sv_unit
 R0
 V^aAXLD@=hbZbP`^:AR:[A0
@@ -115,34 +139,34 @@ r1
 I^aAXLD@=hbZbP`^:AR:[A0
 !i103 1
 S1
-R2
+R3
 R9
 R10
 R11
 L0 1
-R3
 R4
+R5
 R12
 R13
 !i113 1
-R5
 R6
+R7
 vvga_adapter
 R0
 DXx6 sv_std 7 mti_fli 0 22 N`967G9WZ3=6fdOR5MX]S1
-R7
+R1
 !i10b 1
 !s100 h8aB6A^ia_odOh=<4`Ka>0
 IAiXGF[dd60:IFI`BU]B7^2
-R1
+R2
 !s105 vga_adapter_sv_unit
 S1
-R2
+R3
 Z14 w1729804995
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv
 L0 82
-R3
+R4
 r1
 !s85 0
 31
@@ -150,23 +174,23 @@ R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv|
 !i113 1
-R5
 R6
+R7
 vvga_address_translator
 R0
-R7
+R1
 !i10b 1
 !s100 >4Ck2[^7MRo410`;`mBhG0
 IOAh0nen[?DcA_z;j?g:i]2
-R1
+R2
 !s105 vga_address_translator_sv_unit
 S1
-R2
+R3
 R14
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv
 L0 8
-R3
+R4
 r1
 !s85 0
 31
@@ -174,23 +198,23 @@ R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv|
 !i113 1
-R5
 R6
+R7
 vvga_controller
 R0
-R7
+R1
 !i10b 1
 !s100 K^Z0JG9FjLR6T71PJVY]`2
 I[ZXZ`MDjmIjSGfhPgBl`41
-R1
+R2
 !s105 vga_controller_sv_unit
 S1
-R2
+R3
 R14
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv
 L0 13
-R3
+R4
 r1
 !s85 0
 31
@@ -198,23 +222,23 @@ R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv|
 !i113 1
-R5
 R6
+R7
 vvga_pll
 R0
-R7
+R1
 !i10b 1
 !s100 B@RTRAe2BCUY;gLZj0kH`3
 IbfF01ZeYU^]UU2NSfMHZh2
-R1
+R2
 !s105 vga_pll_sv_unit
 S1
-R2
+R3
 R14
 8C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv
 FC:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv
 L0 36
-R3
+R4
 r1
 !s85 0
 31
@@ -222,5 +246,5 @@ R8
 !s107 C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv|
 !i113 1
-R5
 R6
+R7

@@ -1,2 +1,4 @@
-Warning (10268): Verilog HDL information at snake_game.sv(36): always construct contains both blocking and non-blocking assignments File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 36
-Info (10281): Verilog HDL Declaration information at snake_game.sv(14): object "start" differs only in case from object "START" in the same scope File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 14
+Info (10281): Verilog HDL Declaration information at fillscreen.sv(4): object "colour" differs only in case from object "COLOUR" in the same scope File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 4
+Info (10281): Verilog HDL Declaration information at fillscreen.sv(6): object "done" differs only in case from object "DONE" in the same scope File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 6
+Warning (10268): Verilog HDL information at snake_game.sv(54): always construct contains both blocking and non-blocking assignments File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 54
+Info (10281): Verilog HDL Declaration information at snake_game.sv(19): object "start" differs only in case from object "START" in the same scope File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 19

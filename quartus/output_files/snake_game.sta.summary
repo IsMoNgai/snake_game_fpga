@@ -3,255 +3,255 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock_slow'
-Slack : -5.500
-TNS   : -242.088
+Slack : -5.294
+TNS   : -242.768
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.155
-TNS   : -695.149
+Slack : -4.590
+TNS   : -746.985
 
 Type  : Slow 1100mV 85C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -2.349
-TNS   : -28.070
+Slack : -2.515
+TNS   : -25.984
 
 Type  : Slow 1100mV 85C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -1.595
-TNS   : -16.151
+Slack : -1.418
+TNS   : -9.638
 
 Type  : Slow 1100mV 85C Model Setup 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.587
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'clock_slow'
-Slack : 0.278
+Slack : 35.032
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.329
+Slack : -0.210
+TNS   : -0.697
+
+Type  : Slow 1100mV 85C Model Hold 'clock_slow'
+Slack : 0.106
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.375
+Slack : 0.412
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.820
+Slack : 0.858
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 1.013
+Slack : 0.866
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clock_slow'
-Slack : -3.782
-TNS   : -214.542
-
-Type  : Slow 1100mV 85C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -3.259
-TNS   : -39.066
+Slack : -3.639
+TNS   : -210.372
 
 Type  : Slow 1100mV 85C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -3.235
-TNS   : -35.575
+Slack : -3.425
+TNS   : -23.973
+
+Type  : Slow 1100mV 85C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
+Slack : -3.075
+TNS   : -39.951
+
+Type  : Slow 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
+Slack : 2.414
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'clock_slow'
-Slack : 2.574
+Slack : 2.499
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 2.593
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 2.608
+Slack : 2.790
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_slow'
 Slack : -0.394
-TNS   : -44.986
+TNS   : -44.286
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
 Slack : -0.394
-TNS   : -7.133
+TNS   : -7.912
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
 Slack : -0.394
-TNS   : -6.585
+TNS   : -3.987
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.875
+Slack : 8.879
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.780
+Slack : 18.788
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clock_slow'
-Slack : -5.724
-TNS   : -242.827
+Slack : -5.354
+TNS   : -242.815
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.833
-TNS   : -624.500
+Slack : -4.187
+TNS   : -664.452
 
 Type  : Slow 1100mV 0C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -2.345
-TNS   : -28.029
+Slack : -2.580
+TNS   : -26.980
 
 Type  : Slow 1100mV 0C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -1.589
-TNS   : -16.183
+Slack : -1.450
+TNS   : -9.821
 
 Type  : Slow 1100mV 0C Model Setup 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.648
+Slack : 35.140
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.036
-TNS   : -0.036
+Slack : -0.476
+TNS   : -6.115
 
 Type  : Slow 1100mV 0C Model Hold 'clock_slow'
-Slack : 0.222
+Slack : 0.157
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.376
+Slack : 0.392
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.783
+Slack : 0.807
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 0.968
+Slack : 0.812
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clock_slow'
-Slack : -3.826
-TNS   : -217.750
+Slack : -3.717
+TNS   : -215.592
 
 Type  : Slow 1100mV 0C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -3.364
-TNS   : -36.989
+Slack : -3.511
+TNS   : -24.574
 
 Type  : Slow 1100mV 0C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -3.361
-TNS   : -40.289
+Slack : -3.195
+TNS   : -41.514
+
+Type  : Slow 1100mV 0C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
+Slack : 2.526
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'clock_slow'
-Slack : 2.669
+Slack : 2.589
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 2.695
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 2.704
+Slack : 2.873
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_slow'
 Slack : -0.394
-TNS   : -43.222
+TNS   : -43.810
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
 Slack : -0.394
-TNS   : -6.820
+TNS   : -7.690
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
 Slack : -0.394
-TNS   : -6.563
+TNS   : -3.924
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.834
+Slack : 8.826
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.761
+Slack : 18.757
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.807
-TNS   : -456.371
+Slack : -2.947
+TNS   : -479.080
 
 Type  : Fast 1100mV 85C Model Setup 'clock_slow'
-Slack : -2.784
-TNS   : -118.147
+Slack : -2.727
+TNS   : -117.522
 
 Type  : Fast 1100mV 85C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -1.105
-TNS   : -12.095
+Slack : -1.063
+TNS   : -10.554
 
 Type  : Fast 1100mV 85C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -0.668
-TNS   : -6.438
+Slack : -0.533
+TNS   : -3.552
 
 Type  : Fast 1100mV 85C Model Setup 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.764
+Slack : 36.882
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'clock_slow'
-Slack : -0.069
-TNS   : -0.118
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.001
-TNS   : 0.000
+Slack : -0.351
+TNS   : -4.041
+
+Type  : Fast 1100mV 85C Model Hold 'clock_slow'
+Slack : -0.057
+TNS   : -0.147
 
 Type  : Fast 1100mV 85C Model Hold 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.213
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.429
+Slack : 0.234
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 0.495
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
+Slack : 0.456
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clock_slow'
-Slack : -1.931
-TNS   : -107.245
+Slack : -1.807
+TNS   : -101.979
 
 Type  : Fast 1100mV 85C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -1.493
-TNS   : -16.423
+Slack : -1.658
+TNS   : -11.606
 
 Type  : Fast 1100mV 85C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -1.487
-TNS   : -17.831
+Slack : -1.388
+TNS   : -18.033
+
+Type  : Fast 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
+Slack : 1.132
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'clock_slow'
-Slack : 1.225
+Slack : 1.213
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 1.253
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 1.259
+Slack : 1.404
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_slow'
-Slack : -0.041
-TNS   : -0.412
+Slack : -0.081
+TNS   : -0.502
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 0.020
+Slack : 0.016
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.020
+Slack : 0.054
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -259,87 +259,87 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.809
+Slack : 8.806
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.891
+Slack : 18.895
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clock_slow'
-Slack : -2.677
-TNS   : -108.946
+Slack : -2.599
+TNS   : -107.460
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.332
-TNS   : -348.920
+Slack : -2.421
+TNS   : -367.052
 
 Type  : Fast 1100mV 0C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -0.961
-TNS   : -10.721
+Slack : -0.960
+TNS   : -9.638
 
 Type  : Fast 1100mV 0C Model Setup 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -0.576
-TNS   : -5.573
+Slack : -0.467
+TNS   : -3.095
 
 Type  : Fast 1100mV 0C Model Setup 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 37.070
+Slack : 37.224
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.197
-TNS   : -3.512
+Slack : -0.543
+TNS   : -16.632
 
 Type  : Fast 1100mV 0C Model Hold 'clock_slow'
-Slack : -0.114
-TNS   : -0.224
+Slack : -0.094
+TNS   : -0.299
 
 Type  : Fast 1100mV 0C Model Hold 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.199
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.382
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 0.440
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
+Slack : 0.405
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clock_slow'
-Slack : -1.838
-TNS   : -102.454
+Slack : -1.731
+TNS   : -98.307
 
 Type  : Fast 1100mV 0C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : -1.477
-TNS   : -16.247
+Slack : -1.595
+TNS   : -11.165
 
 Type  : Fast 1100mV 0C Model Recovery 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : -1.462
-TNS   : -17.531
-
-Type  : Fast 1100mV 0C Model Removal 'clock_slow'
-Slack : 1.227
-TNS   : 0.000
+Slack : -1.376
+TNS   : -17.874
 
 Type  : Fast 1100mV 0C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 1.243
+Slack : 1.133
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clock_slow'
+Slack : 1.202
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 1.243
+Slack : 1.379
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_slow'
-Slack : 0.007
+Slack : -0.030
+TNS   : -0.057
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
+Slack : 0.048
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkY'
-Slack : 0.050
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'display_game:snake_game_display|pos_rng:pos_gen|clkX'
-Slack : 0.054
+Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -347,11 +347,11 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.803
+Slack : 8.799
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MyVGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.890
+Slack : 18.892
 TNS   : 0.000
 
 ------------------------------------------------------------

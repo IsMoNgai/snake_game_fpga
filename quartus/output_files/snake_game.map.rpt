@@ -1,5 +1,5 @@
 Analysis & Synthesis report for snake_game
-Thu Dec 26 01:29:07 2024
+Mon Dec 30 16:26:57 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -31,10 +31,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  23. altpll Parameter Settings by Entity Instance
  24. Port Connectivity Checks: "vga_adapter:MyVGA"
  25. Port Connectivity Checks: "display_game:snake_game_display"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+ 26. Port Connectivity Checks: "fillscreen:clear_screen"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,13 +61,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 26 01:29:07 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 30 16:26:57 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; snake_game                                  ;
 ; Top-level Entity Name           ; snake_game                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 148                                         ;
+; Total registers                 ; 168                                         ;
 ; Total pins                      ; 113                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 57,600                                      ;
@@ -180,8 +181,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -190,6 +190,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
 +------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; ../fillscreen.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv                         ;         ;
 ; ../vga_adapter/vga_pll.sv                ; yes             ; User Wizard-Generated File   ; C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv                ;         ;
 ; ../vga_adapter/vga_controller.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_controller.sv         ;         ;
 ; ../vga_adapter/vga_address_translator.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_address_translator.sv ;         ;
@@ -218,36 +219,36 @@ refer to the applicable agreement for further details.
 +------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 145           ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 240           ;
-;     -- 7 input functions                    ; 1             ;
-;     -- 6 input functions                    ; 45            ;
-;     -- 5 input functions                    ; 31            ;
-;     -- 4 input functions                    ; 29            ;
-;     -- <=3 input functions                  ; 134           ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 148           ;
-;                                             ;               ;
-; I/O pins                                    ; 113           ;
-; Total MLAB memory bits                      ; 0             ;
-; Total block memory bits                     ; 57600         ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Total PLLs                                  ; 1             ;
-;     -- PLLs                                 ; 1             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; rst_n_display ;
-; Maximum fan-out                             ; 68            ;
-; Total fan-out                               ; 1778          ;
-; Average fan-out                             ; 2.85          ;
-+---------------------------------------------+---------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 190            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 313            ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 61             ;
+;     -- 5 input functions                    ; 55             ;
+;     -- 4 input functions                    ; 41             ;
+;     -- <=3 input functions                  ; 153            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 168            ;
+;                                             ;                ;
+; I/O pins                                    ; 113            ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 57600          ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Total PLLs                                  ; 1              ;
+;     -- PLLs                                 ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 70             ;
+; Total fan-out                               ; 2154           ;
+; Average fan-out                             ; 3.00           ;
++---------------------------------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -255,10 +256,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |snake_game                                             ; 240 (53)            ; 148 (40)                  ; 57600             ; 0          ; 113  ; 0            ; |snake_game                                                                                                  ; snake_game             ; work         ;
-;    |display_game:snake_game_display|                    ; 124 (85)            ; 80 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |snake_game|display_game:snake_game_display                                                                  ; display_game           ; work         ;
-;       |pos_rng:pos_gen|                                 ; 39 (39)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |snake_game|display_game:snake_game_display|pos_rng:pos_gen                                                  ; pos_rng                ; work         ;
-;    |vga_adapter:MyVGA|                                  ; 63 (1)              ; 28 (0)                    ; 57600             ; 0          ; 0    ; 0            ; |snake_game|vga_adapter:MyVGA                                                                                ; vga_adapter            ; work         ;
+; |snake_game                                             ; 313 (90)            ; 168 (41)                  ; 57600             ; 0          ; 113  ; 0            ; |snake_game                                                                                                  ; snake_game             ; work         ;
+;    |display_game:snake_game_display|                    ; 119 (74)            ; 80 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |snake_game|display_game:snake_game_display                                                                  ; display_game           ; work         ;
+;       |pos_rng:pos_gen|                                 ; 45 (45)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |snake_game|display_game:snake_game_display|pos_rng:pos_gen                                                  ; pos_rng                ; work         ;
+;    |fillscreen:clear_screen|                            ; 40 (40)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |snake_game|fillscreen:clear_screen                                                                          ; fillscreen             ; work         ;
+;    |vga_adapter:MyVGA|                                  ; 64 (2)              ; 28 (0)                    ; 57600             ; 0          ; 0    ; 0            ; |snake_game|vga_adapter:MyVGA                                                                                ; vga_adapter            ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 6 (0)               ; 4 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |snake_game|vga_adapter:MyVGA|altsyncram:VideoMemory                                                         ; altsyncram             ; work         ;
 ;          |altsyncram_g6k1:auto_generated|               ; 6 (0)               ; 4 (4)                     ; 57600             ; 0          ; 0    ; 0            ; |snake_game|vga_adapter:MyVGA|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated                          ; altsyncram_g6k1        ; work         ;
 ;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake_game|vga_adapter:MyVGA|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b ; decode_01a             ; work         ;
@@ -288,12 +290,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                                 ; Reason for Removal                                    ;
 +---------------------------------------------------------------+-------------------------------------------------------+
 ; display_game:snake_game_display|pos_rng:pos_gen|count_posY[0] ; Stuck at VCC due to stuck port data_in                ;
-; display_game:snake_game_display|state[3..9,11..31]            ; Merged with display_game:snake_game_display|state[10] ;
 ; state[2..9,11..31]                                            ; Merged with state[10]                                 ;
+; display_game:snake_game_display|state[3..9,11..31]            ; Merged with display_game:snake_game_display|state[10] ;
+; fillscreen:clear_screen|state[2..9,11..31]                    ; Merged with fillscreen:clear_screen|state[10]         ;
 ; display_game:snake_game_display|state[10]                     ; Stuck at GND due to stuck port data_in                ;
 ; display_game:snake_game_display|curr_apple_posY[0]            ; Stuck at VCC due to stuck port data_in                ;
 ; state[10]                                                     ; Stuck at GND due to stuck port data_in                ;
-; Total Number of Removed Registers = 61                        ;                                                       ;
+; fillscreen:clear_screen|state[10]                             ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 91                        ;                                                       ;
 +---------------------------------------------------------------+-------------------------------------------------------+
 
 
@@ -312,12 +316,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 148   ;
-; Number of registers using Synchronous Clear  ; 79    ;
+; Total registers                              ; 168   ;
+; Number of registers using Synchronous Clear  ; 87    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 85    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Clock Enable       ; 42    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -327,15 +331,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------+---------+
 ; Inverted Register                                             ; Fan out ;
 +---------------------------------------------------------------+---------+
-; display_game:snake_game_display|pos_rng:pos_gen|count_posX[0] ; 3       ;
 ; display_game:snake_game_display|curr_apple_posX[0]            ; 2       ;
 ; display_game:snake_game_display|curr_apple_posX[1]            ; 2       ;
 ; display_game:snake_game_display|curr_apple_posX[2]            ; 2       ;
 ; display_game:snake_game_display|curr_apple_posX[3]            ; 2       ;
 ; display_game:snake_game_display|curr_apple_posY[1]            ; 2       ;
 ; display_game:snake_game_display|curr_apple_posY[2]            ; 2       ;
-; display_game:snake_game_display|curr_apple_posY[3]            ; 2       ;
-; Total number of inverted registers = 8                        ;         ;
+; display_game:snake_game_display|curr_apple_posY[3]            ; 3       ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posX[0] ; 2       ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posX[1] ; 10      ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posX[2] ; 10      ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posX[3] ; 3       ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posY[1] ; 7       ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posY[2] ; 7       ;
+; display_game:snake_game_display|pos_rng:pos_gen|count_posY[3] ; 7       ;
+; Total number of inverted registers = 14                       ;         ;
 +---------------------------------------------------------------+---------+
 
 
@@ -344,16 +354,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |snake_game|vga_adapter:MyVGA|vga_controller:controller|yCounter[9]                                             ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |snake_game|count_slow[5]                                                                                       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |snake_game|dir[1]                                                                                              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |snake_game|vga_adapter:MyVGA|vga_controller:controller|yCounter[3]                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |snake_game|count_slow[7]                                                                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |snake_game|dir[0]                                                                                              ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |snake_game|state[10]                                                                                           ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |snake_game|fillscreen:clear_screen|state[10]                                                                   ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |snake_game|display_game:snake_game_display|curr_snake_posX[4]                                                  ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |snake_game|display_game:snake_game_display|curr_snake_posY[1]                                                  ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |snake_game|display_game:snake_game_display|curr_snake_posY[0]                                                  ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |snake_game|display_game:snake_game_display|curr_apple_posY[1]                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |snake_game|vga_adapter:MyVGA|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|mux_ifb:mux3|result_node[2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |snake_game|vga_adapter:MyVGA|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|mux_ifb:mux3|result_node[0] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |snake_game|fillscreen:clear_screen|stored_Y                                                                    ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |snake_game|display_game:snake_game_display|curr_snake_posX                                                     ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |snake_game|display_game:snake_game_display|curr_snake_posY                                                     ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |snake_game|display_game:snake_game_display|Selector8                                                           ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |snake_game|display_game:snake_game_display|Selector7                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
 
 
@@ -929,44 +942,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------+
+; Port Connectivity Checks: "fillscreen:clear_screen" ;
++--------+-------+----------+-------------------------+
+; Port   ; Type  ; Severity ; Details                 ;
++--------+-------+----------+-------------------------+
+; colour ; Input ; Info     ; Stuck at GND            ;
++--------+-------+----------+-------------------------+
+
+
++-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 148                         ;
-;     CLR               ; 28                          ;
-;     CLR SCLR          ; 34                          ;
-;     ENA               ; 17                          ;
+; arriav_ff             ; 168                         ;
+;     CLR               ; 36                          ;
+;     CLR SCLR          ; 26                          ;
+;     ENA               ; 19                          ;
 ;     ENA CLR           ; 13                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     SCLR              ; 35                          ;
+;     SCLR              ; 51                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 240                         ;
-;     arith             ; 91                          ;
-;         1 data inputs ; 78                          ;
-;         2 data inputs ; 13                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 128                         ;
+;     plain             ; 12                          ;
+; arriav_lcell_comb     ; 313                         ;
+;     arith             ; 106                         ;
+;         1 data inputs ; 92                          ;
+;         2 data inputs ; 14                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 184                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 29                          ;
-;         5 data inputs ; 31                          ;
-;         6 data inputs ; 45                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 36                          ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 61                          ;
 ;     shared            ; 20                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 12                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 2                           ;
+;         4 data inputs ; 5                           ;
 ; boundary_port         ; 113                         ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.47                        ;
+; Max LUT depth         ; 4.90                        ;
+; Average LUT depth     ; 2.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -985,10 +1007,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 26 01:28:54 2024
+    Info: Processing started: Mon Dec 30 16:26:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off snake_game -c snake_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/fillscreen.sv
+    Info (12023): Found entity 1: fillscreen File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/vga_adapter/vga_pll.sv
     Info (12023): Found entity 1: vga_pll File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_pll.sv Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/vga_adapter/vga_controller.sv
@@ -998,27 +1022,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/vga_adapter/vga_adapter.sv
     Info (12023): Found entity 1: vga_adapter File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv Line: 82
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/snake_game.sv
-    Info (12023): Found entity 1: snake_game File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 1
+    Info (12023): Found entity 1: snake_game File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/pos_rng.sv
     Info (12023): Found entity 1: pos_rng File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/momon/onedrive/documents/github/snake_game_fpga/display_game.sv
     Info (12023): Found entity 1: display_game File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 3
 Info (12127): Elaborating entity "snake_game" for the top level hierarchy
-Warning (10034): Output port "LEDR[7..2]" at snake_game.sv(2) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-Warning (10034): Output port "HEX0" at snake_game.sv(3) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-Warning (10034): Output port "HEX1" at snake_game.sv(3) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-Warning (10034): Output port "HEX2" at snake_game.sv(3) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-Warning (10034): Output port "HEX3" at snake_game.sv(4) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-Warning (10034): Output port "HEX4" at snake_game.sv(4) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-Warning (10034): Output port "HEX5" at snake_game.sv(4) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-Info (12128): Elaborating entity "display_game" for hierarchy "display_game:snake_game_display" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 61
+Warning (10034): Output port "LEDR[7..2]" at snake_game.sv(7) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+Warning (10034): Output port "HEX0" at snake_game.sv(8) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+Warning (10034): Output port "HEX1" at snake_game.sv(8) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+Warning (10034): Output port "HEX2" at snake_game.sv(8) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+Warning (10034): Output port "HEX3" at snake_game.sv(9) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+Warning (10034): Output port "HEX4" at snake_game.sv(9) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+Warning (10034): Output port "HEX5" at snake_game.sv(9) has no driver File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+Info (12128): Elaborating entity "fillscreen" for hierarchy "fillscreen:clear_screen" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 82
+Warning (10036): Verilog HDL or VHDL warning at fillscreen.sv(19): object "stored_colour" assigned a value but never read File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at fillscreen.sv(61): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at fillscreen.sv(65): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/fillscreen.sv Line: 65
+Info (12128): Elaborating entity "display_game" for hierarchy "display_game:snake_game_display" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 96
 Warning (10858): Verilog HDL warning at display_game.sv(14): object old_apple_posX used but never assigned File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 14
 Warning (10858): Verilog HDL warning at display_game.sv(15): object old_apple_posY used but never assigned File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at display_game.sv(116): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 116
-Warning (10230): Verilog HDL assignment warning at display_game.sv(120): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 120
-Warning (10230): Verilog HDL assignment warning at display_game.sv(124): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 124
-Warning (10230): Verilog HDL assignment warning at display_game.sv(128): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 128
-Warning (10230): Verilog HDL assignment warning at display_game.sv(132): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 132
+Warning (10230): Verilog HDL assignment warning at display_game.sv(115): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 115
+Warning (10230): Verilog HDL assignment warning at display_game.sv(119): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at display_game.sv(123): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at display_game.sv(127): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at display_game.sv(131): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 131
 Warning (10030): Net "old_apple_posX" at display_game.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 14
 Warning (10030): Net "old_apple_posY" at display_game.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 15
 Info (12128): Elaborating entity "pos_rng" for hierarchy "display_game:snake_game_display|pos_rng:pos_gen" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/display_game.sv Line: 21
@@ -1026,7 +1054,7 @@ Warning (10230): Verilog HDL assignment warning at pos_rng.sv(25): truncated val
 Warning (10230): Verilog HDL assignment warning at pos_rng.sv(31): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv Line: 31
 Warning (10230): Verilog HDL assignment warning at pos_rng.sv(44): truncated value with size 32 to match size of target (8) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv Line: 44
 Warning (10230): Verilog HDL assignment warning at pos_rng.sv(54): truncated value with size 32 to match size of target (7) File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/pos_rng.sv Line: 54
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:MyVGA" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 75
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:MyVGA" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 110
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:MyVGA|vga_address_translator:user_input_translator" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv Line: 200
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:MyVGA|altsyncram:VideoMemory" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv Line: 221
 Info (12130): Elaborated megafunction instantiation "vga_adapter:MyVGA|altsyncram:VideoMemory" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv Line: 221
@@ -1077,55 +1105,55 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:MyVGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:MyVGA|vga_controller:controller" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/vga_adapter/vga_adapter.sv Line: 259
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 3
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 4
-    Warning (13410): Pin "VGA_COLOUR[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 8
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 9
+    Warning (13410): Pin "VGA_COLOUR[0]" is stuck at GND File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 184 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -1318,25 +1346,25 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: RST port on the PLL is not properly connected on instance vga_adapter:MyVGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/quartus/db/altpll_80u.tdf Line: 33
     Info: Must be connected
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 2
-Info (21057): Implemented 384 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/momon/OneDrive/Documents/GitHub/snake_game_fpga/snake_game.sv Line: 7
+Info (21057): Implemented 457 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 98 output pins
-    Info (21061): Implemented 261 logic cells
+    Info (21061): Implemented 334 logic cells
     Info (21064): Implemented 9 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 267 warnings
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Thu Dec 26 01:29:07 2024
-    Info: Elapsed time: 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 270 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Mon Dec 30 16:26:57 2024
+    Info: Elapsed time: 00:00:26
     Info: Total CPU time (on all processors): 00:00:25
 
 

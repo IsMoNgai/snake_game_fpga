@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Dec 26 01:30:01 2024
+Fitter Status : Successful - Mon Dec 30 16:27:53 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : snake_game
 Top-level Entity Name : snake_game
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 143 / 32,070 ( < 1 % )
-Total registers : 170
+Logic utilization (in ALMs) : 183 / 32,070 ( < 1 % )
+Total registers : 187
 Total pins : 113 / 457 ( 25 % )
 Total virtual pins : 0
 Total block memory bits : 57,600 / 4,065,280 ( 1 % )
